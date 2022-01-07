@@ -1,7 +1,13 @@
 const btn = document.getElementById('criar-tarefa');
 const list = document.getElementById('lista-tarefas');
 
+// funçao criada com a ajuda do meu amigo Elton
 function changeColor() {
+  const listaClasses = document.querySelector('.selected');
+  if (listaClasses !== null) {
+    listaClasses.classList.remove('selected');
+  }
+
   this.classList.add('selected');
 }
 
