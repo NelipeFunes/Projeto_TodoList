@@ -10,6 +10,13 @@ function changeColor() {
 
   this.classList.add('selected');
 }
+function complete() {
+  if (this.classList.contains('completed')) {
+    this.classList.remove('completed');
+  } else {
+    this.classList.add('completed');
+  }
+}
 
 function createTask() {
   const task = document.getElementById('texto-tarefa');
@@ -18,6 +25,7 @@ function createTask() {
   list.appendChild(temp);
   task.value = '';
   temp.addEventListener('click', changeColor);
+  temp.addEventListener('dblclick', complete);
 }
 
 btn.addEventListener('click', createTask);
